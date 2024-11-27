@@ -45,7 +45,7 @@ export default function Animals() {
           <p className="mt-6 text-lg leading-8 text-gray-600"></p>
           På MiniZoo kan du träffa flera fanatstiska individer. Kolla in några
           av dem här.
-          <p>
+          <p id="name-of-animal-types">
             De djurtyper vi har i parken för närvarande är{' '}
             {types
               .map((item) => item.name)

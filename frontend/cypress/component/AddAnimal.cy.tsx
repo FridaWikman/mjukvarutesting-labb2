@@ -1,6 +1,6 @@
 import AddAnimal from '../../src/components/AddAnimal'
 
-describe('AddAnimal.cy.tsx', () => {
+describe('<AddAnimal />', () => {
   it('mounts AddAnimal-component, types text in name-field, selects option in select and checks value, types text in weight-field, types text in image-field.', () => {
     cy.mount(<AddAnimal types={[]} />)
     cy.get('#animal-name').type('Doris')

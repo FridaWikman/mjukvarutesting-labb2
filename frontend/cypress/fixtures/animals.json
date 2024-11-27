@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Leif",
+    "image": "https://cdn.pixabay.com/photo/2019/07/02/10/25/giraffe-4312090_1280.jpg",
+    "type_name": "Giraff",
+    "weight": "1100 kg"
+  },
+  {
+    "name": "Karl",
+    "image": "https://cdn.pixabay.com/photo/2017/08/14/10/34/african-elephant-2640034_1280.jpg",
+    "type_name": "Elefant",
+    "weight": "3000 kg"
+  }
+]
