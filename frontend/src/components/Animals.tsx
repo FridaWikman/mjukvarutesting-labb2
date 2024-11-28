@@ -27,6 +27,21 @@ export default function Animals() {
     }
   }
 
+  const deleteAnimal = async (id: number) => {
+    const requestOptions = {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    }
+    try {
+      await fetch('http://localhost:3000/api/delete', requestOptions)
+    } catch (error) {
+      console.error('Error in DELETE request:', error)
+    } finally {
+      window.location.reload()
+    }
+  }
+
   useEffect(() => {
     fetchAnimals()
     fetchTypes()
@@ -62,8 +77,8 @@ export default function Animals() {
           className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
         >
           {animals.map((animal) => (
-            <li key={animal.name}>
-              <div className="card flex gap-x-6 p-4 rounded shadow-lg">
+            <li key={animal.id}>
+              <div className="card flex gap-x-4 p-4 rounded shadow-lg">
                 <img
                   alt=""
                   src={animal.image}
@@ -79,6 +94,11 @@ export default function Animals() {
                   <p className="pt-4 text-sm font-semibold text-gray-800">
                     Vikt: {animal.weight}
                   </p>
+                </div>
+                <div className="flex items-end">
+                  <button className="" onClick={() => deleteAnimal(animal.id)}>
+                    Ta bort
+                  </button>
                 </div>
               </div>
             </li>

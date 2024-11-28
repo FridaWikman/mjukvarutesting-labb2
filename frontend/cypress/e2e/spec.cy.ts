@@ -15,4 +15,16 @@ describe('Minizoo', () => {
       .should('have.value', 1)
       .should('contain', 'Elefant')
   })
+
+  it('post new animal to database and see that it shows in array fetched from database', () => {
+    cy.visit('http://localhost:5173/')
+    cy.get('#animal-name').type('Ville')
+    cy.get('select').select('Brunbjörn')
+    cy.get('#animal-weight').type('150 kg')
+    cy.get('#animal-image').type(
+      'https://cdn.pixabay.com/photo/2016/03/27/18/10/bear-1283347_1280.jpg'
+    )
+    cy.get('#submit-button').click()
+    cy.get('li').should('contain', 'Ville')
+  })
 })

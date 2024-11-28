@@ -7,7 +7,7 @@ CREATE TABLE animal_types (
 
 CREATE TABLE animals (
   id serial PRIMARY KEY,
-  name TEXT NOT NULL,
+  name TEXT NOT NULL UNIQUE,
   weight VARCHAR(50),
   type INTEGER NOT NULL,
   image VARCHAR NOT NULL,

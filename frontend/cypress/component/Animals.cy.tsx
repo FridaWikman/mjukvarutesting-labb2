@@ -5,7 +5,7 @@ describe('<Animals />', () => {
     cy.intercept(
       {
         method: 'GET',
-        url: 'http://localhost:3000/api',
+        url: '/api',
       },
       {
         fixture: 'animals.json',
