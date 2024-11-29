@@ -96,7 +96,10 @@ export default function Animals() {
                   </p>
                 </div>
                 <div className="flex items-end">
-                  <button className="" onClick={() => deleteAnimal(animal.id)}>
+                  <button
+                    id="delete-button"
+                    onClick={() => deleteAnimal(animal.id)}
+                  >
                     Ta bort
                   </button>
                 </div>
