@@ -32,3 +32,13 @@ Interface som beskriver JSON-strukturen som frontend-delen hämtar från backend
 Det ska inte finnas några any i min kod.
 
 ## Labb 2 Mål
+
+E2e-tester som använder it finns i cypress/e2e, fil spec.cy.ts.
+
+Komponenttest finns i cypress/componen, fil AddAnimal.cy.tsx.
+
+Kopmplett e2e-test finns i cypress/e2e, fil spec.cy.ts.
+
+Ett test där mocking-data används finns i cypress/component fil Animals.cy.tsx. Mocking-datan finns i cypress/fixtures fil animals.json.
+
+Integrgrationstester finns i cypress/e2e fil integration-request.cy.tsx. när post testet är gjort går det att se det nya djuret genom att besöka webbsidan.

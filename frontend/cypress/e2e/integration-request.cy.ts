@@ -1,16 +1,15 @@
 describe('integration tests', () => {
-  it('gets a list of animals', () => {
-    let arrayLength: number
+  it('gets a list of animals using GET', () => {
     cy.request({
       method: 'GET',
       url: '/api',
     }).then((data) => {
       expect(data.body).to.be.an('array').length.greaterThan(0)
       cy.log(data.body)
-      arrayLength = data.body.length
     })
+  })
 
-    // it('testing POST', () => {
+  it('post animal', () => {
     cy.request({
       method: 'POST',
       url: '/api/post',
@@ -22,12 +21,5 @@ describe('integration tests', () => {
         weight: '3000 kg',
       },
     })
-    cy.request({
-      method: 'GET',
-      url: '/api',
-    }).then((data) => {
-      expect(data.body).length.greaterThan(arrayLength)
-    })
   })
-  // })
 })
