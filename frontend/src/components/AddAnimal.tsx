@@ -29,8 +29,6 @@ function AddAnimal(props: AddAnimalProps) {
       console.log(data)
     } catch (error) {
       console.error('Error in POST request:', error)
-    } finally {
-      window.location.reload()
     }
   }
 

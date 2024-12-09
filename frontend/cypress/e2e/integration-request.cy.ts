@@ -20,6 +20,8 @@ describe('integration tests', () => {
         type: 1,
         weight: '3000 kg',
       },
+    }).then((resp) => {
+      expect(resp.status).to.eq(201)
     })
   })
 })
